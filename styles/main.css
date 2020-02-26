@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 300vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.par-cats{
+    height: 100vh;
+    width: 100%;
+    background-color: #e1f5fe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.par-cats__main-img{
+    height: 240px;
+}
+
+.par-cats__title{
+    font-size: 6em;
+    background-color: #1976d2;
+    color: white;
+    padding: 20px 30px;
+    margin: 0;
+    text-shadow: 4px 4px 6px rgba(0,0,0,.2);
+}
+
+.par-cats__text{
+    width: 60%;
+    font-size: 2em;
+    text-align: center;
+}
