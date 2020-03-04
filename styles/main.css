@@ -6,6 +6,7 @@ body{
     margin: 0;
     height: 300vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
 }
@@ -69,4 +70,11 @@ body{
     bottom: 0px;
     right: 0px;
     width: 300px;
+}
+
+
+.space-3d{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
