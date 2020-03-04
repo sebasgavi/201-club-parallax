@@ -20,6 +20,7 @@ body{
     justify-content: center;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 }
 
 .par-cats__main-img{
@@ -54,12 +55,14 @@ body{
     top: 0px;
     right: 0px;
     width: 250px;
+    z-index: -1;
 }
 
 .par-cats__floating--3{
     bottom: 0px;
     left: 0px;
     width: 300px;
+    z-index: -1;
 }
 
 .par-cats__floating--4{
