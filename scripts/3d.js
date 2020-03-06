@@ -4,6 +4,8 @@ function sketch3D (p) {
     var roomWidth = p.windowWidth * 1.4;
     var roomHeight = 600;
 
+    var deviceRotation;
+
     p.preload = function () {
         happyManImage = p.loadImage('./images/happy-man.png');
     }
@@ -12,6 +14,12 @@ function sketch3D (p) {
         var canvas = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
         canvas.parent('3d-space');
         p.normalMaterial();
+
+        
+        window.addEventListener("deviceorientation", function () {
+            deviceRotation = event.alpha;
+        }, true);
+
     }
     
     p.draw = function () {
@@ -19,6 +27,10 @@ function sketch3D (p) {
 
         var limit = .5;
         var ry = p.map(p.mouseX, 0, p.windowWidth, -limit, limit);
+
+        if(deviceRotation){
+            ry = p.map(deviceRotation, -180, 180, -limit, limit);
+        }
 
         p.push();
         p.rotateY(ry);
