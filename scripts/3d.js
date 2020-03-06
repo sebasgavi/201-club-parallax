@@ -17,7 +17,7 @@ function sketch3D (p) {
 
         
         window.addEventListener("deviceorientation", function (event) {
-            deviceRotation = event.alpha;
+            deviceRotation = event.alpha + event.beta + event.gamma;
         }, true);
 
     }
