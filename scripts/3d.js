@@ -16,7 +16,7 @@ function sketch3D (p) {
         p.normalMaterial();
 
         
-        window.addEventListener("deviceorientation", function () {
+        window.addEventListener("deviceorientation", function (event) {
             deviceRotation = event.alpha;
         }, true);
 
@@ -43,6 +43,9 @@ function sketch3D (p) {
     function drawContent (ry) {
         // happy man
         var w = 350;
+        if(p.windowWidth < 500){
+            w = 200;
+        }
         p.push();
         p.translate(w, w*-.5, 0);
         p.rotateY(-ry);
